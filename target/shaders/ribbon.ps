@@ -1,0 +1,34 @@
+
+// Texture2D g_texture : register(t0);
+// SamplerState g_sampler : register(s0);
+
+struct VS_OUTPUT
+{
+	float4 screenPos : SV_POSITION;
+	float4 color : COLOR0;
+	float2 UV : TEXCOORD0;
+};
+
+cbuffer Params : register(b0)
+{
+	float time;
+	float3 padding;
+};
+
+#define	PI 3.14159265359f
+
+float4 main(in VS_OUTPUT input) : SV_TARGET
+{
+	float timeAdj = time*0.3f;
+	float2 UV = input.UV;
+	float4 SW = 0.1f + 0.3f*abs(cos(timeAdj + UV.x));
+	float H = sin((UV.x*2.f + timeAdj)*2.2f)*0.25f*sin(timeAdj);
+	UV = (UV*2.f - 1.f) + float2(0.f, H);
+
+	float G = max(
+		abs(SW.y/(pow(UV.y, 2.1f*sin(SW.x*PI))))*0.3f,
+		abs(0.325/UV.y));
+
+	float3 color = float3(G*G*SW.y*0.6f, SW.w*G*0.44f , G*G*0.7f);
+	return float4(color.x, color.y, color.z, G*input.color.w);	
+}

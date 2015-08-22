@@ -1,0 +1,58 @@
+
+---------------------------------------------------------------------------------------------------
+1. Box art.
+---------------------------------------------------------------------------------------------------
+
+These file are to be supplied in title folder.
+
+Background art: ib_background.png
+- A 16:9 image (1920*1080, ideally).
+
+Developer logo (optional): ib_developer.png
+- Resolution may be arbitrary and the aspect ratio is adaptive.
+- Make sure it looks good in 1080p.
+- Must be transparent (uses alpha channel).
+
+
+---------------------------------------------------------------------------------------------------
+2. Title XML.
+---------------------------------------------------------------------------------------------------
+
+In a title folder, create a file named 'ib_title.xml' and specify the following tags:
+
+<Name>Resident Evil 3: Nemesis</Name>
+<Developer>Capcom Studio X</Developer>
+<Genre>Survival Horror</Genre>
+<!-- <Year>1999</Year> -->
+<!-- <Publisher>Capcom</Publisher> -->
+<NumPlayers>1</NumPlayers>
+<Keyboard>TRUE/FALSE</Keyboard>
+<Controller>TRUE/FALSE</Controller>
+<Summary>Back in 1998, Capcom released the third instalment of...</Summary> 
+<Platforms>
+	<Icon>...</Icon>
+</Platforms>
+<Awards>
+	<Icon>...</Icon>
+</Awards>
+
+Important:
+- Summary must be kept short (max. 10 lines). If it's too long it will be clipped.
+- Available platform & award icons are in their respective directories in 'target\assets\icon'.
+  8 platform and 2 award icons will be displayed.
+  Refer to them by their filename (e.g. 'ps3.png').
+- Some of these tags seem game-specific but can easily describe movies et cetera.
+
+In the same folder, create a file named 'ib_launch.xml' and specify the following tags:
+
+<Executable>test.exe</Executable>       <!-- Path: executable or URL (for URL, start with 'http://'). -->
+<WorkDir></WorkDir>                     <!-- Path: work directory. Not required. -->
+<CommandLineParams></CommandLineParams> <!-- Command line parameters. Not required. -->
+
+Important: 
+- Paths can either be absolute or, preferrably, relative to the title path (i.e. 'assets\games\RE3').
+- Title will run from title path (unless specified otherwise).
+- Paths are verified on startup.
+- Extensions '.html', '.htm' and '.swf' or URLs are launched by the default browser.
+
+Please report bugs & feature requests!

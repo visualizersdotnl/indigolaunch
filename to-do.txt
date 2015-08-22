@@ -1,0 +1,53 @@
+
+customer tasks #1 (free):
+- fix launch glitch (run in "fake" full screen)
+- facilitate faster (semi-exponential?) scrolling through titles
+
+customer tasks #2 (not approved yet):
+- built-in video & SWF support (SWF support price still has to be negotiated)
+
+priority:
+- finish patching up VS solution
+- evaluate: port to Direct3D 11 & ditching D3DX, is that worth anything to me?
+  (using Std3DMath is a good idea though)
+- fix sprites (see TPB-xxx)
+- expand assertions (and perhaps at the D3D-specific ones)
+- create centralized resource loader
+- grab default browser instead of Firefox
+- move GetExitCodeProcess() wait loop to a non-blocking location
+- review XInput code (continuous polling is slow & controller not properly re-detected after removal)
+- crash guard (see TPB-xxx)
+- block screen saver and/or power management
+- verify startup path
+- see about reenabling C++ exceptions?
+- perhaps log style output to the console instead of message box error reporting?
+  in any case, do something about it!
+- ToString() has got to go, toute de suite!
+
+features:
+- research full browser integration
+- support multiple collections (use subdirectories?)
+- write a guide for indie developers for compatibility
+- decouple actual game and metadata location
+- tactile feedback (X360)
+- UI: support variable box art dimensions & improve animation
+- tweakable audio?
+- missing (asset): platform icons (Ouya, Vita, 3DS, web, ...)
+- add setup dialog like in TPB-xxx?
+- discuss: developer logo currently unused, what to do?
+
+refactoring:
+- use a NoCopy class where appropriate (e.g. Title) (steal edited Boost::noncopyable from TPB-xxx)
+- clean up top-level UI manager (Flow)
+- redesign metadata XML
+- use more string streams
+- make renderer core functions private (befriend WinMain())
+- rename enumerated types (use prefix: i.e. kInputBack instead of kBack)
+- search for 'hack', 'FIXME' et cetera and review each case
+- gamma correct rendering (involves changing buffer & texture formats, mostly)
+- retrofit C++11
+
+future plans:
+- editor (Realtime Studio / Fuse?) & deploy mechanism
+  + is there no existing tool that could author this content for us?
+- make PDF manual?

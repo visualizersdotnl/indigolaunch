@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{63CDE538-1267-482D-9625-4B71FA0D7AB4}</ProjectGuid>
+    <RootNamespace>VS9</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>Jukebox</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.50727.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)\..\target\x86\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <ExecutablePath>$(VCInstallDir)bin;$(WindowsSDK_ExecutablePath_x86);$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(MSBuildToolsPath32);$(VSInstallDir);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);</ExecutablePath>
+    <IncludePath>$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSDK_LibraryPath_x86);</LibraryPath>
+    <TargetName>$(ProjectName)D</TargetName>
+    <ReferencePath>$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib</ReferencePath>
+    <ExcludePath>$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath);$(MSBuildToolsPath32);$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;</ExcludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)\..\target\x86\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <ExecutablePath>$(VCInstallDir)bin;$(WindowsSDK_ExecutablePath_x86);$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(MSBuildToolsPath32);$(VSInstallDir);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);</ExecutablePath>
+    <IncludePath>$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSDK_LibraryPath_x86);</LibraryPath>
+    <ReferencePath>$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib</ReferencePath>
+    <ExcludePath>$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath);$(MSBuildToolsPath32);$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;</ExcludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>false</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <FloatingPointExceptions>true</FloatingPointExceptions>
+      <StringPooling>true</StringPooling>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>d3d10.lib;dxgi.lib;d3dx10d.lib;xinput.lib;..\3rdparty\bass24\c\bass.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>d3d10.lib;dxgi.lib;d3dx10.lib;xinput.lib;..\3rdparty\bass24\c\bass.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="..\documentation\Manual.txt" />
+    <Text Include="..\documentation\Title XML and art.txt" />
+    <Text Include="..\to-do.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\3rdparty\pugixml-1.2\src\pugiconfig.hpp" />
+    <ClInclude Include="..\3rdparty\pugixml-1.2\src\pugixml.hpp" />
+    <ClInclude Include="..\code\audio.h" />
+    <ClInclude Include="..\code\collection.h" />
+    <ClInclude Include="..\code\CPUID.h" />
+    <ClInclude Include="..\code\fileutil.h" />
+    <ClInclude Include="..\code\flow.h" />
+    <ClInclude Include="..\code\inputcallback.h" />
+    <ClInclude Include="..\code\platform.h" />
+    <ClInclude Include="..\code\timer.h" />
+    <ClInclude Include="..\code\title.h" />
+    <ClInclude Include="..\code\util.h" />
+    <ClInclude Include="..\code\xmlutil.h" />
+    <ClInclude Include="..\code\views\select.h" />
+    <ClInclude Include="..\code\views\splash.h" />
+    <ClInclude Include="..\code\views\view.h" />
+    <ClInclude Include="..\code\renderer.h" />
+    <ClInclude Include="..\code\renderutil.h" />
+    <ClInclude Include="..\code\text.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\3rdparty\pugixml-1.2\src\pugixml.cpp">
+      <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Sync</ExceptionHandling>
+      <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Sync</ExceptionHandling>
+    </ClCompile>
+    <ClCompile Include="..\code\audio.cpp" />
+    <ClCompile Include="..\code\collection.cpp" />
+    <ClCompile Include="..\code\fileutil.cpp" />
+    <ClCompile Include="..\code\flow.cpp" />
+    <ClCompile Include="..\code\main.cpp" />
+    <ClCompile Include="..\code\title.cpp" />
+    <ClCompile Include="..\code\xmlutil.cpp" />
+    <ClCompile Include="..\code\views\select.cpp" />
+    <ClCompile Include="..\code\views\splash.cpp" />
+    <ClCompile Include="..\code\renderer.cpp" />
+    <ClCompile Include="..\code\text.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\target\shaders\2Dsprite.ps">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">fxc "%(FullPath)" /T ps_4_0 /E main /Vn g_PS_%(Filename) /Fh "%(RootDir)%(Directory)%(Filename).psh"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> %(RootDir)%(Directory)%(Filename).psh;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">fxc "%(FullPath)" /T ps_4_0 /E main /Vn g_PS_%(Filename) /Fh "%(RootDir)%(Directory)%(Filename).psh"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> %(RootDir)%(Directory)%(Filename).psh;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="..\target\shaders\2Dsprite.psh" />
+    <CustomBuild Include="..\target\shaders\2Dsprite.vs">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">fxc "%(FullPath)" /T vs_4_0 /E main /Vn g_VS_%(Filename) /Fh "%(RootDir)%(Directory)%(Filename).vsh"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).vsh;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">fxc "%(FullPath)" /T vs_4_0 /E main /Vn g_VS_%(Filename) /Fh "%(RootDir)%(Directory)%(Filename).vsh"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).vsh;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="..\target\shaders\2Dsprite.vsh" />
+    <CustomBuild Include="..\target\shaders\ribbon.ps">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">fxc "%(FullPath)" /T ps_4_0 /E main /Vn g_PS_%(Filename) /Fh "%(RootDir)%(Directory)%(Filename).psh"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> %(RootDir)%(Directory)%(Filename).psh;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">fxc "%(FullPath)" /T ps_4_0 /E main /Vn g_PS_%(Filename) /Fh "%(RootDir)%(Directory)%(Filename).psh"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> %(RootDir)%(Directory)%(Filename).psh;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="..\target\shaders\ribbon.psh" />
+    <None Include="..\.gitignore" />
+    <None Include="..\target\x86\.gitignore" />
+    <None Include="..\target\shaders\.gitignore" />
+    <None Include=".gitignore" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="INDIGO.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Jukebox.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

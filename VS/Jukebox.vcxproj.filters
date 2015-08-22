@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Documentation">
+      <UniqueIdentifier>{bd86a7c7-283b-4ac3-96f9-1ea7f7c7c15b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="/3rdparty">
+      <UniqueIdentifier>{8e1d674d-e970-4db6-bae2-7fa4b5a1ab26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="/3rdparty\/pugixml-1.2">
+      <UniqueIdentifier>{0df5e884-c4ba-4a45-8ba1-dd39eba18ad7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="/3rdparty\/pugixml-1.2\/src">
+      <UniqueIdentifier>{c0ae7fff-247f-471c-9670-8f01fc797978}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="/3rdparty\/bass24">
+      <UniqueIdentifier>{f547af63-bf33-47d6-8cc6-2751901af17f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="/code">
+      <UniqueIdentifier>{161bb5d6-5a58-4fd1-b94c-0116fb398d7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="/code\/views">
+      <UniqueIdentifier>{c566145b-b6b3-4101-be65-b006c18e4dd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="/code\render">
+      <UniqueIdentifier>{caee99eb-d7aa-4ed5-a91f-87307302ed5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="/target/shaders">
+      <UniqueIdentifier>{0dd7c67e-58e8-4271-bf76-f99ffb8e0ca9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include=".gitignore">
+      <UniqueIdentifier>{247bc02a-cf1f-4e14-8434-3db92c76b7fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="/VS">
+      <UniqueIdentifier>{c9e72d05-1048-42fb-aeca-f7132a245004}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\documentation\Manual.txt">
+      <Filter>Documentation</Filter>
+    </Text>
+    <Text Include="..\documentation\Title XML and art.txt">
+      <Filter>Documentation</Filter>
+    </Text>
+    <Text Include="..\to-do.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\3rdparty\pugixml-1.2\src\pugiconfig.hpp">
+      <Filter>/3rdparty\/pugixml-1.2\/src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\pugixml-1.2\src\pugixml.hpp">
+      <Filter>/3rdparty\/pugixml-1.2\/src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\code\audio.h">
+      <Filter>/code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\code\collection.h">
+      <Filter>/code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\code\fileutil.h">
+      <Filter>/code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\code\flow.h">
+      <Filter>/code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\code\inputcallback.h">
+      <Filter>/code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\code\platform.h">
+      <Filter>/code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\code\timer.h">
+      <Filter>/code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\code\title.h">
+      <Filter>/code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\code\util.h">
+      <Filter>/code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\code\xmlutil.h">
+      <Filter>/code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\code\views\select.h">
+      <Filter>/code\/views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\code\views\splash.h">
+      <Filter>/code\/views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\code\views\view.h">
+      <Filter>/code\/views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\code\renderer.h">
+      <Filter>/code\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\code\renderutil.h">
+      <Filter>/code\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\code\text.h">
+      <Filter>/code\render</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>/VS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\code\CPUID.h">
+      <Filter>/code</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\3rdparty\pugixml-1.2\src\pugixml.cpp">
+      <Filter>/3rdparty\/pugixml-1.2\/src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\code\audio.cpp">
+      <Filter>/code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\code\collection.cpp">
+      <Filter>/code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\code\fileutil.cpp">
+      <Filter>/code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\code\flow.cpp">
+      <Filter>/code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\code\main.cpp">
+      <Filter>/code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\code\title.cpp">
+      <Filter>/code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\code\xmlutil.cpp">
+      <Filter>/code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\code\views\select.cpp">
+      <Filter>/code\/views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\code\views\splash.cpp">
+      <Filter>/code\/views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\code\renderer.cpp">
+      <Filter>/code\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\code\text.cpp">
+      <Filter>/code\render</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\target\shaders\2Dsprite.psh">
+      <Filter>/target/shaders</Filter>
+    </None>
+    <None Include="..\target\shaders\2Dsprite.vsh">
+      <Filter>/target/shaders</Filter>
+    </None>
+    <None Include="..\target\shaders\ribbon.psh">
+      <Filter>/target/shaders</Filter>
+    </None>
+    <None Include="..\.gitignore">
+      <Filter>.gitignore</Filter>
+    </None>
+    <None Include="..\target\x86\.gitignore">
+      <Filter>.gitignore</Filter>
+    </None>
+    <None Include="..\target\shaders\.gitignore">
+      <Filter>.gitignore</Filter>
+    </None>
+    <None Include=".gitignore">
+      <Filter>.gitignore</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="INDIGO.ico">
+      <Filter>/VS</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Jukebox.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\target\shaders\2Dsprite.ps">
+      <Filter>/target/shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\target\shaders\2Dsprite.vs">
+      <Filter>/target/shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\target\shaders\ribbon.ps">
+      <Filter>/target/shaders</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

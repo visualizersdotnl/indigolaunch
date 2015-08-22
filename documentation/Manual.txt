@@ -1,0 +1,29 @@
+
+INDIGO Jukebox 3.1 
+a Dutch Game Garden initiative, developed by visualizers.nl
+---------------------------------------------------------------------------------------------------
+
+System req.:
+- Windows Vista or upwards.
+- DirectX 10.0 capable display adapter.
+- Supports X360 controllers (not required).
+- Primary display adapter & monitor assumed:
+  + Fixed aspect ratio is 16:9 (letterboxing applied if necessary).
+  + In case of trouble: disable all displays except your primary.
+ 
+To run:
+- Launch: target\x86\indigolaunch.exe (from this directory!)
+- For now put all titles (games) in target\games!
+
+Controls:
+- Keyboard: use arrows (L/R), enter (select/launch) and escape (back).
+- The X360 controllers responds intuitively and actions are clarified by the UI.
+- Press A + B + X + Y + LSHOULDER + RSHOULDER on any X360 controller to terminate a running title.
+- Use ALT-F4 to quit and ALT-TAB to reset window focus if need be!
+
+Third party libaries used:
+- pugixml by Arseny Kapoulkine
+- BASS audio library by Ian Luck
+
+---------------------------------------------------------------------------------------------------
+We're open source: http://github.com/visualizersdotnl/indigolaunch
