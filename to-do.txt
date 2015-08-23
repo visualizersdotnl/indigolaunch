@@ -1,17 +1,9 @@
 
-customer tasks #1 (free):
-- fix launch glitch (run in "fake" full screen)
-- facilitate faster (semi-exponential?) scrolling through titles
-
-customer tasks #2 (not approved yet):
-- built-in video & SWF support (SWF support price still has to be negotiated)
-
 priority:
-- finish patching up VS solution
-- evaluate: port to Direct3D 11 & ditching D3DX, is that worth anything to me?
-  (using Std3DMath is a good idea though)
+- fix VS solution
+- port to Direct3D 11 & ditch D3DX (big task!)
+- gamma correct rendering (involves changing buffer & texture formats, mostly)
 - fix sprites (see TPB-xxx)
-- expand assertions (and perhaps at the D3D-specific ones)
 - create centralized resource loader
 - grab default browser instead of Firefox
 - move GetExitCodeProcess() wait loop to a non-blocking location
@@ -24,6 +16,13 @@ priority:
   in any case, do something about it!
 - ToString() has got to go, toute de suite!
 
+customer tasks #1 (free):
+- fix launch glitch (run in "fake" full screen)
+- facilitate faster (semi-exponential?) scrolling through titles
+
+customer tasks #2 (not approved yet):
+- built-in video & SWF support (SWF support price still has to be negotiated)
+
 features:
 - research full browser integration
 - support multiple collections (use subdirectories?)
@@ -32,22 +31,21 @@ features:
 - tactile feedback (X360)
 - UI: support variable box art dimensions & improve animation
 - tweakable audio?
-- missing (asset): platform icons (Ouya, Vita, 3DS, web, ...)
 - add setup dialog like in TPB-xxx?
+- missing (asset): platform icons (Ouya, Vita, 3DS, web, ...)
 - discuss: developer logo currently unused, what to do?
 
 refactoring:
+- retrofit C++11
 - use a NoCopy class where appropriate (e.g. Title) (steal edited Boost::noncopyable from TPB-xxx)
-- clean up top-level UI manager (Flow)
 - redesign metadata XML
 - use more string streams
-- make renderer core functions private (befriend WinMain())
+- clean up top-level UI manager (Flow)
 - rename enumerated types (use prefix: i.e. kInputBack instead of kBack)
+- make renderer core functions private (befriend WinMain())
 - search for 'hack', 'FIXME' et cetera and review each case
-- gamma correct rendering (involves changing buffer & texture formats, mostly)
-- retrofit C++11
 
 future plans:
-- editor (Realtime Studio / Fuse?) & deploy mechanism
+- editor (Fuse?) & deploy mechanism
   + is there no existing tool that could author this content for us?
 - make PDF manual?

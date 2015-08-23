@@ -17,10 +17,10 @@ Title::~Title()
 	SAFE_RELEASE(m_pBackground);
 	SAFE_RELEASE(m_pDevLogo);
 
-	for (std::vector<Renderer::Texture2D *>::iterator iPlatform = m_platforms.begin(); iPlatform != m_platforms.end(); ++iPlatform)
+	for (auto iPlatform = m_platforms.begin(); iPlatform != m_platforms.end(); ++iPlatform)
 		SAFE_RELEASE(*iPlatform);
 
-	for (std::vector<Renderer::Texture2D *>::iterator iAward = m_awards.begin(); iAward != m_awards.end(); ++iAward)
+	for (auto iAward = m_awards.begin(); iAward != m_awards.end(); ++iAward)
 		SAFE_RELEASE(*iAward);
 }
 

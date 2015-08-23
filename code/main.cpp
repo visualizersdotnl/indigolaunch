@@ -1,8 +1,9 @@
 
 /*
 	INDIGO Jukebox (a Dutch Game Garden initiative)
-	target platform: Windows 7 / DirectX (Direct3D 11)
 	by visualizers.nl (http://www.visualizers.nl)
+
+	target platform: Windows 7 (Direct3D)
 
 	third party:
 	- pugixml by Arseny Kapoulkine
@@ -12,7 +13,7 @@
 	- multi-threaded CRT (static)
 	- target: x86 (64-bit may work, but untested)
 	- optional: disable all C++ exceptions (except for /3rdparty/pugixml-1.2/src/pugixml.cpp)
-	  ^ this may change in the near future
+	  ^ FIXME?
 	- Unicode character set
 */
 
