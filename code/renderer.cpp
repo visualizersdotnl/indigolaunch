@@ -467,6 +467,7 @@ inline const D3DXVECTOR3 Rotate(const D3DXVECTOR2 &position, const D3DXVECTOR2 &
 	}
 	else
 	{
+		// FIXME: remove aspect
 		D3DXMATRIX mRotZ;
 		D3DXMatrixRotationZ(&mRotZ, angle);
 		D3DXVECTOR4 vOut;
@@ -497,10 +498,9 @@ void Renderer::AddSprite(
 		VERIFY(SUCCEEDED(m_pSpriteVB->Map(D3D10_MAP_WRITE_DISCARD, 0, reinterpret_cast<void **>(&m_pSpriteVertices))));
 	}
 
-	// hack: transform from top-left aligned 1920*1080 to homogenous space
+	// transform from top-left aligned 1920*1080 to screen space (FIXME: retain aspect)
 	const D3DXVECTOR2 adjTopLeft = D3DXVECTOR2(-1.f + topLeft.x/1920.f*2.f, 1.f - topLeft.y/1080.f*2.f);
 	const D3DXVECTOR2 adjSize = D3DXVECTOR2(size.x/1920.f*2.f, -size.y/1080.f*2.f);
-	
 	const D3DXVECTOR2 bottomRight = adjTopLeft + adjSize;
 	const D3DXVECTOR2 quadPivot(adjTopLeft.x + adjSize.x*0.5f, adjTopLeft.y + adjSize.y*0.5f);
 
