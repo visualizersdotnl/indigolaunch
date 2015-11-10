@@ -1,7 +1,6 @@
 # indigolaunch
 
 INDIGO Jukebox (a Dutch Game Garden initiative)  
-License: BSD
 
 This software is used to showcase both native and browser-based indie games on an arcade style cabinet.  
 It's built using Visual Studio 2012.
